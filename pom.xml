@@ -21,15 +21,17 @@
 			<plugin>
 				<groupId>com.templating</groupId>
 				<artifactId>htmltemplate2js-plugin</artifactId>
-				<version>1.0-SNAPSHOT</version>
+				<version>1.0.0</version>
 				<executions>
 					<execution>
-						<phase>compile</phase>
+						<phase>process-resources</phase>
 						<goals>
 							<goal>generate-js</goal>
 						</goals>
 						<configuration>
 							<templates-folder>${basedir}/templates</templates-folder>
+							<output-file>${basedir}\src\main\webapp\compiledTemplates.js</output-file>
+							<js-template-map-var>templates</js-template-map-var>
 						</configuration>
 					</execution>
 				</executions>
