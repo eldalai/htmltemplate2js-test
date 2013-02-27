@@ -15,6 +15,13 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>thirdparty-releases-GL</id>
+			<name>GL Thirdparty Releases</name>
+			<url>http://nexus.globallogic.com.ar/content/repositories/thirdparty</url>
+		</pluginRepository>
+	</pluginRepositories>
 	<build>
 		<finalName>htmltemplate2js-test</finalName>
 		<plugins>
@@ -32,7 +39,7 @@
 							<templates-folder>${basedir}\src\main\templates</templates-folder>
 							<output-file>${basedir}\src\main\webapp\compiledTemplates.js</output-file>
 							<js-template-map-var>apps.losTemplates</js-template-map-var>
-<!-- 							<remove-comments>true</remove-comments> -->
+							<!-- <remove-comments>true</remove-comments> -->
 						</configuration>
 					</execution>
 				</executions>
@@ -51,7 +58,7 @@
 							<param1>veamos!!!!!!!!!!!!!!</param1>
 						</configuration>
 					</execution>
-					
+
 				</executions>
 			</plugin>
 		</plugins>
